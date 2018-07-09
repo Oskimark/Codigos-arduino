@@ -14,13 +14,16 @@ int entrada_analogica= A0;
 void setup() {
   pinMode (Motor, OUTPUT);               // designamos los pines como pines de salida y entrada
   pinMode (entrada_analogica, INPUT);    // entrada
-}
-
-void loop() {                          //entramos a un siclo repetitivo
-  
 int valor_entrada_analogica =0;       //  declaramos  las variables de tipo entero
 int valor_salida_pwm=0;                   //  declaramos  la variable de tipo entero para la ulizacion de la modulacion por ancho de pulso
                                       //  ojo ( estos pines tienes que ser pines de (PWM)
+
+
+}
+
+void loop() {                          //entramos a un Ciclo repetitivo
+  
+
 
  valor_entrada_analogica = analogRead(entrada_analogica);  // Guardamos la lectura analogica en la variable (valor_entrada_analógica)
  valor_salida_pwm =map(valor_entrada_analogica,0, 1023,0,255); // guardamos el mapeo en la variable (valor salida)
